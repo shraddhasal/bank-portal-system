@@ -9,6 +9,7 @@ import com.bank.bankportal.repository.UserRepository;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AuthController {
 
     @Autowired
