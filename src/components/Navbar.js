@@ -1,20 +1,23 @@
 import "./../styles/home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-  const email = localStorage.getItem("email");
+  const navigate = useNavigate();
 
-  // extract name from email
+  const email = localStorage.getItem("email");
+  const isLoggedIn = email && email !== "undefined";
+
+  // extract username safely
   let username = "";
-  if(email){
+  if (isLoggedIn && email.includes("@")) {
     username = email.split("@")[0];
     username = username.charAt(0).toUpperCase() + username.slice(1);
   }
 
   const handleLogout = () => {
     localStorage.clear();
-    window.location.href = "/login";
+    navigate("/login");   // better than window.location
   };
 
   return (
@@ -35,9 +38,9 @@ function Navbar() {
 
       <div className="nav-buttons">
 
-        {email ? (
+        {isLoggedIn ? (
           <>
-            <span style={{marginRight:"15px"}}>
+            <span style={{ marginRight: "15px" }}>
               Welcome {username}
             </span>
 

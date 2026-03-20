@@ -21,16 +21,24 @@ const handleSubmit = (e)=>{
 e.preventDefault();
 
 login(user)
-.then(res=>{
+.then(res => {
 
-localStorage.setItem("token",res.data);
-localStorage.setItem("email",user.email);  // store email
+  console.log("Response:", res.data);
 
-navigate("/dashboard");
+  if(res.data.error){
+    alert(res.data.error);
+    return;
+  }
+
+  localStorage.setItem("token", res.data.token);
+  localStorage.setItem("email", res.data.email);
+
+  navigate("/dashboard");
 
 })
-.catch(err=>{
-alert("Login Failed");
+.catch(err => {
+  console.log("ERROR:", err);
+  alert("Login Failed");
 });
 
 };
