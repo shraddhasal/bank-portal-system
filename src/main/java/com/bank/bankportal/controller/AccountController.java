@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.bank.bankportal.model.Account;
 import com.bank.bankportal.service.AccountService;
+import com.bank.bankportal.model.MyAccountDTO;
 
 @RestController
 @RequestMapping("/api/accounts")
@@ -26,6 +27,13 @@ public class AccountController {
         return accountService.getAccounts();
     }
 
+    // ⭐ Put this FIRST
+    @GetMapping("/myaccount/{email}")
+    public MyAccountDTO getMyAccount(@PathVariable String email){
+        return accountService.getMyAccount(email);
+    }
+
+    // ⭐ Put this LAST
     @GetMapping("/{email}")
     public Account getAccount(@PathVariable String email){
         return accountService.getAccountByEmail(email).orElse(null);
