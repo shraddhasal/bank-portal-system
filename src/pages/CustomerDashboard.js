@@ -52,8 +52,8 @@ if(!email || email === "undefined"){
         <ul>
           <li>Dashboard</li>
           <li onClick={()=>navigate("/myaccount")}>My Account</li>
-          <li>Transfer Money</li>
-          <li>Transactions</li>
+          <li onClick={() => navigate("/transfer")}>Transfer Money</li>
+          <li onClick={() => navigate("/transactions")}> Transactions</li>
           <li>Profile</li>
 
           <li

@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import CustomerDashboard from "./pages/CustomerDashboard";
 import MyAccount from "./pages/MyAccount";
+import TransferMoney from "./pages/TransferMoney";
+import Transactions from "./pages/Transactions";
 function App() {
   return (
     <Router>
@@ -17,6 +19,8 @@ function App() {
         <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<CustomerDashboard />} />
       <Route path="/myaccount" element={<MyAccount/>}/>
+      <Route path="/transfer" element={<TransferMoney />} />
+      <Route path="/transactions" element={<Transactions />} />
       </Routes>
     </Router>
   );

@@ -31,7 +31,7 @@ axios.get("http://localhost:8080/api/accounts/myaccount/" + email)
 if(res.data){
 
 setAccount(res.data);
-
+localStorage.setItem("accountNumber", res.data.accountNumber);
 setProfile({
 name:res.data.name || "",
 email:res.data.email || "",
