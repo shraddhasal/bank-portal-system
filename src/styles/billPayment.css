@@ -1,0 +1,119 @@
+.bill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.bill-card {
+  background: #ffffff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.bill-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bill-card label {
+  font-weight: 500;
+  display: block;
+  margin-top: 10px;
+}
+
+.bill-card input,
+.bill-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.bill-card button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bill-card button:hover {
+  background-color: #45a049;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.bill-card {
+  background: #ffffff;
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bill-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bill-card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.bill-card input,
+.bill-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.bill-card button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bill-card button:hover {
+  background-color: #45a049;
+}
+.back-btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #1e3a5f, #2e5c8a);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+.back-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.back-btn:hover {
+  background: linear-gradient(45deg, #16324a, #244c73);
+}
